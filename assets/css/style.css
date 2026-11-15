@@ -41,7 +41,8 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--shell);outline-offs
 .hero img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:12px}
 .facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:8px 0 0;padding-top:20px;border-top:1px solid var(--line)}
 .facts dt{font-size:12px}
-.facts dd{margin:2px 0 0;font-family:var(--display);font-weight:700;font-size:26px}
+.facts dd{margin:2px 0 0;font-family:var(--display);font-weight:700;font-size:26px;line-height:1.15}
+.facts dd small{display:block;margin-top:2px;font-family:var(--body,inherit);font-weight:400;font-size:14px;line-height:1.3;color:var(--muted,#5b6270)}
 .row{display:flex;flex-wrap:wrap;gap:12px}
 .band{background:var(--jac);color:#fff}
 .band .wrap{padding-top:48px;padding-bottom:48px}
