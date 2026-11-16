@@ -1,3 +1,10 @@
+/* Tipografías alojadas en la propia web (licencia SIL OFL 1.1), sin peticiones a Google */
+@font-face{font-family:"Barlow Condensed";font-style:normal;font-weight:500;font-display:swap;src:url(../fonts/barlow-condensed-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Barlow Condensed";font-style:normal;font-weight:600;font-display:swap;src:url(../fonts/barlow-condensed-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Barlow Condensed";font-style:normal;font-weight:700;font-display:swap;src:url(../fonts/barlow-condensed-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"Source Sans 3";font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/source-sans-3-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Source Sans 3";font-style:normal;font-weight:600;font-display:swap;src:url(../fonts/source-sans-3-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Source Sans 3";font-style:normal;font-weight:700;font-display:swap;src:url(../fonts/source-sans-3-latin-700-normal.woff2) format("woff2")}
 :root{
   --ink:#14223d;--paper:#f2f4f1;--card:#ffffff;--muted:#4d5a6b;--line:#d5dad6;
   --shell:#f2b705;--gr:#c8102e;--moss:#2f5d46;--jac:#1d2c78;
@@ -74,6 +81,8 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--shell);outline-offs
 .pfoot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;margin-top:auto;padding-top:10px}
 .price{font-family:var(--display);font-weight:700;font-size:24px;font-variant-numeric:tabular-nums}
 .buy{min-height:44px;font-size:15px;padding:0 16px}
+.buyslot{display:inline-flex;align-items:center;gap:12px;flex-wrap:wrap}
+.alt-buy{font-size:14px;font-weight:600;color:inherit;text-decoration:underline;text-underline-offset:3px}
 .soon{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border-radius:6px;border:1.5px dashed #8a95a3;color:var(--muted);font-weight:600;font-size:14px}
 .routes{display:flex;flex-direction:column;gap:18px}
 .route{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:24px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px;align-items:start}
@@ -103,3 +112,15 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--shell);outline-offs
 .site-footer .brand{font-family:var(--display);font-weight:700;font-size:26px;letter-spacing:.08em;color:#fff}
 .site-footer .small{font-size:13px;color:#aeb8c8}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* Páginas legales */
+.legal{max-width:760px}
+.legal h2{font-family:var(--display);font-size:28px;margin:32px 0 8px}
+.legal h3{font-family:var(--display);font-size:21px;margin:22px 0 6px}
+.legal p{margin:0 0 12px;line-height:1.55}
+.legal blockquote{margin:12px 0;padding:14px 18px;border-left:4px solid var(--line);background:var(--card)}
+.dform[hidden]{display:none}
+.dform{display:flex;flex-direction:column;gap:14px;max-width:460px;margin-top:20px}
+.dform label{display:flex;flex-direction:column;gap:6px;font-weight:600}
+.dform input{font:inherit;padding:10px 12px;border:1.5px solid var(--line);border-radius:6px;background:#fff}
+.dform .note{font-size:14px;color:var(--muted)}

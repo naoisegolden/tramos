@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Desistir del contrato · Tramos</title>
+<meta name="description" content="Devuelve tu compra de Tramos en 14 días.">
+<script>(function(){var p=location.pathname;if(!/\/$/.test(p)&&!/\.[a-z0-9]+$/i.test(p)){location.replace(p+'/'+location.search+location.hash)}})();</script>
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="topbar">Compra directa con pago seguro o en <a href="https://www.amazon.es/">Amazon.es</a> · envío gratis a la península</div>
+<header class="site-header"><div class="wrap">
+  <a class="logo" href="index.html"><span class="stripe" aria-hidden="true"><span class="w"></span><span class="r"></span></span><b>TRAMOS</b></a>
+  <nav class="nav" aria-label="Principal">
+    <a class="navlink" href="camino-de-santiago.html">Camino de Santiago</a>
+    <a class="navlink" href="senderos-gr.html">Senderos GR</a>
+    <a class="navlink" href="caminos-naturales.html">Caminos Naturales</a>
+    <a class="navlink" href="vias-verdes.html">Vías Verdes</a>
+    <a class="navlink" href="otras-rutas.html">Otras rutas</a>
+    <a class="navlink" href="index.html#envios">Envíos</a>
+    <a class="navlink" href="index.html#faq">Preguntas</a>
+  </nav>
+</div></header>
+<main>
+<div class="wrap crumbs"><a href="index.html">Inicio</a> › Desistir del contrato</div>
+<section class="wrap section legal">
+<h1 class="h-l">Desistir del contrato</h1>
+<p>Si compraste un parche en esta web en los últimos 14 días desde que lo recibiste, puedes devolverlo sin dar razones. Rellena estos datos y confirma. Se abrirá tu correo con el mensaje preparado; envíalo y te responderé con el acuse de recibo, con la fecha y hora en que lo recibí. Más detalles en las <a href="aviso-legal.html#desistimiento">condiciones de venta</a>.</p>
+<form id="desist" class="dform">
+<label>Nombre y apellidos<input name="nombre" required autocomplete="name"></label>
+<label>Email que usaste en la compra<input name="email" type="email" required autocomplete="email"></label>
+<label>Parche o parches que devuelves<input name="producto" required></label>
+<label>Fecha del pedido<input name="fecha" type="date" required></label>
+<button class="btn btn-solid" type="submit">Desistir del contrato aquí</button>
+</form>
+<div id="confirm" class="dform" hidden>
+<p id="resumen"></p>
+<a id="confirmar" class="btn btn-shell">Confirmar desistimiento</a>
+<p class="note">Si no se abre tu correo, escribe a <a href="mailto:void.ratio_9a@icloud.com">void.ratio_9a@icloud.com</a> con estos mismos datos.</p>
+</div>
+</section>
+</main>
+<footer class="site-footer"><div class="wrap">
+  <div class="col"><span class="brand">TRAMOS</span><span>Parches bordados de rutas de España. Envío solo a la península.</span>
+    <span class="small">Diseños propios, no oficiales: sin relación con los organismos que gestionan las rutas. Concha del Camino: «Vieira Xacobea», de Marco Pérez Kistler (Wikimedia Commons), CC BY-SA 4.0.</span>
+    <span class="small">Como afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables.</span></div>
+  <nav class="col" aria-label="Colecciones"><span style="font-weight:700;color:#fff">Colecciones</span>
+    <a href="camino-de-santiago.html">Camino de Santiago</a>
+    <a href="senderos-gr.html">Senderos GR</a>
+    <a href="caminos-naturales.html">Caminos Naturales</a>
+    <a href="vias-verdes.html">Vías Verdes</a>
+    <a href="otras-rutas.html">Otras rutas</a>
+  </nav>
+  <div class="col"><span style="font-weight:700;color:#fff">Contacto</span><a href="mailto:void.ratio_9a@icloud.com">void.ratio_9a@icloud.com</a><a href="aviso-legal.html">Aviso legal y condiciones</a><a href="privacidad.html">Privacidad</a><a href="desistimiento.html">Desistir del contrato aquí</a></div>
+</div></footer>
+<script>
+(function(){var f=document.getElementById('desist');if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();var d=new FormData(f);
+var t='Desisto de mi contrato de venta del siguiente bien: '+d.get('producto')+'.\nPedido el '+d.get('fecha')+'.\nNombre: '+d.get('nombre')+'.\nEmail de la compra: '+d.get('email')+'.';
+document.getElementById('resumen').textContent=t;
+document.getElementById('confirmar').href='mailto:void.ratio_9a@icloud.com?subject='+encodeURIComponent('Desistimiento de compra en Tramos')+'&body='+encodeURIComponent(t);
+f.hidden=true;document.getElementById('confirm').hidden=false;});})();
+</script>
+<script src="assets/js/products.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

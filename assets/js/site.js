@@ -1,15 +1,25 @@
 (function () {
   var links = window.TRAMOS_PRODUCTS || {};
-  // Botones de compra: enlace de Amazon si existe, si no "Próximamente".
+  // Botones de compra: pago directo (Stripe) si existe, Amazon como alternativa; si no hay ninguno, "Próximamente".
+  var direct = window.TRAMOS_STRIPE || {};
   document.querySelectorAll('.buyslot[data-sku]').forEach(function (slot) {
-    var p = links[slot.getAttribute('data-sku')];
-    if (p && p.amazon) {
+    var sku = slot.getAttribute('data-sku'), p = links[sku] || {}, s = direct[sku];
+    if (!s && !p.amazon) return;
+    slot.innerHTML = '';
+    if (s) {
+      var b = document.createElement('a');
+      b.className = 'btn btn-shell buy';
+      b.href = s;
+      b.rel = 'noopener';
+      b.textContent = 'Comprar';
+      slot.appendChild(b);
+    }
+    if (p.amazon) {
       var a = document.createElement('a');
-      a.className = 'btn btn-shell buy';
+      a.className = s ? 'alt-buy' : 'btn btn-shell buy';
       a.href = p.amazon;
       a.rel = 'noopener';
-      a.textContent = 'Comprar en Amazon';
-      slot.innerHTML = '';
+      a.textContent = s ? 'o en Amazon' : 'Comprar en Amazon';
       slot.appendChild(a);
     }
   });
