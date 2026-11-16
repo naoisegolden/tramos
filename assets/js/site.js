@@ -9,7 +9,7 @@
     if (s) {
       var b = document.createElement('a');
       b.className = 'btn btn-shell buy';
-      b.href = s;
+      b.href = s + (s.indexOf('?') < 0 ? '?' : '&') + 'locale=es';
       b.rel = 'noopener';
       b.textContent = 'Comprar';
       slot.appendChild(b);
