@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Propón un parche · Tramos</title>
+<meta name="description" content="¿No encuentras el parche de tu ruta? Propón una ruta, tramo, pico o puerto y lo estudiamos.">
+<script>(function(){var p=location.pathname;if(!/\/$/.test(p)&&!/\.[a-z0-9]+$/i.test(p)){location.replace(p+'/'+location.search+location.hash)}})();</script>
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="topbar"><b>Envío gratis a toda la península</b> · Compra directa o en <a href="https://www.amazon.es/">Amazon.es</a></div>
+<header class="site-header"><div class="wrap">
+  <a class="logo" href="index.html"><span class="stripe" aria-hidden="true"><span class="w"></span><span class="r"></span></span><b>TRAMOS</b></a>
+  <nav class="nav" aria-label="Principal">
+    <a class="navlink" href="camino-de-santiago.html">Camino de Santiago</a>
+    <a class="navlink" href="senderos-gr.html">Senderos GR</a>
+    <a class="navlink" href="caminos-naturales.html">Caminos Naturales</a>
+    <a class="navlink" href="vias-verdes.html">Vías Verdes</a>
+    <a class="navlink" href="otras-rutas.html">Otras rutas</a>
+    <a class="navlink" href="index.html#envios">Envíos</a>
+    <a class="navlink" href="index.html#faq">Preguntas</a>
+  </nav>
+</div></header>
+<main>
+<div class="wrap crumbs"><a href="index.html">Inicio</a> › Propón un parche</div>
+<section class="wrap section legal">
+<h1 class="h-l">Propón un parche</h1>
+<p>¿Te falta la ruta, el tramo, el pico o el puerto que has hecho? Rellena esto y se abrirá tu correo con el mensaje preparado. Solo tienes que enviarlo.</p>
+<form id="prop" class="dform">
+<label>Ruta, tramo, pico o puerto<input name="ruta" required placeholder="Ej.: Camino del Norte · Irún – Santander"></label>
+<label>Detalles (opcional)<textarea name="detalles" rows="4" placeholder="Etapas, distancia, colores, señalización, por qué te gustaría…"></textarea></label>
+<label>Tu nombre (opcional)<input name="nombre" autocomplete="name"></label>
+<button class="btn btn-solid" type="submit">Enviar propuesta</button>
+</form>
+<p class="note" style="margin-top:16px">Si no se abre tu correo, escribe a <a href="mailto:void.ratio_9a@icloud.com">void.ratio_9a@icloud.com</a>. Solo usaré tu mensaje para responderte (<a href="privacidad.html">privacidad</a>).</p>
+</section>
+</main>
+<footer class="site-footer"><div class="wrap">
+  <div class="col"><span class="brand">TRAMOS</span><span>Parches bordados de rutas de España. Envío solo a la península.</span>
+    <span class="small">Diseños propios, no oficiales: sin relación con los organismos que gestionan las rutas. Concha del Camino: «Vieira Xacobea», de Marco Pérez Kistler (Wikimedia Commons), CC BY-SA 4.0.</span>
+    <span class="small">Como afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables.</span></div>
+  <nav class="col" aria-label="Colecciones"><span style="font-weight:700;color:#fff">Colecciones</span>
+    <a href="camino-de-santiago.html">Camino de Santiago</a>
+    <a href="senderos-gr.html">Senderos GR</a>
+    <a href="caminos-naturales.html">Caminos Naturales</a>
+    <a href="vias-verdes.html">Vías Verdes</a>
+    <a href="otras-rutas.html">Otras rutas</a>
+  </nav>
+  <div class="col"><span style="font-weight:700;color:#fff">Contacto</span><a href="mailto:void.ratio_9a@icloud.com">void.ratio_9a@icloud.com</a><a href="aviso-legal.html">Aviso legal y condiciones</a><a href="privacidad.html">Privacidad</a><a href="propuesta.html">Propón un parche</a><a href="desistimiento.html">Desistir del contrato aquí</a></div>
+</div></footer>
+<script>
+(function(){var f=document.getElementById('prop');if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();var d=new FormData(f);
+var t='Propuesta de parche: '+d.get('ruta')+(d.get('detalles')?'\n\nDetalles: '+d.get('detalles'):'')+(d.get('nombre')?'\n\n'+d.get('nombre'):'');
+location.href='mailto:void.ratio_9a@icloud.com?subject='+encodeURIComponent('Propuesta de parche: '+d.get('ruta'))+'&body='+encodeURIComponent(t);});})();
+</script>
+<script src="assets/js/products.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
